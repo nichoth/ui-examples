@@ -1,6 +1,5 @@
-import '../src/index.css'
-import '../src/index.js'
+import './index.css'
 
 document.body.innerHTML += `
-    <example-component></example-component>
+    <a class="button" href="#">example</a>
 `
