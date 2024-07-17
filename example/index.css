@@ -1,3 +1,13 @@
+:root {
+    --sat2: 0%;
+    --hue1: 200;
+    --hue2: 260;
+    --pop: var(--hue2, 0), var(--sat2, 30%);
+    --hover: hsl(var(--pop), 40%);
+    --links: var(--hue1, 0), 40%;
+
+}
+
 .button {
     font-family: sans-serif;
     font-size: 1.2rem;
@@ -24,5 +34,23 @@
         transition: 0.3s ease-in-out;
         transform: translateY(0px) scale(0.8);
         border-bottom: 2px solid rgba(255, 0, 0, 0.6);
+    }
+}
+
+.wavy {
+    transition: all 0.4s;
+    text-decoration-line: underline;
+    text-decoration-color: var(--hover);
+    text-decoration-thickness: .2ex;
+    text-underline-offset: 0.55ex;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+
+    &:hover {
+        color: var(--hover);
+        border-bottom: 0;
+        text-decoration-color: var(--links);
+        text-decoration-style: wavy;
+        text-underline-offset: 0.55ex;
     }
 }
